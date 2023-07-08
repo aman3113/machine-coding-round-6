@@ -10,7 +10,7 @@ const RestaurantList = ({ selectedCuisine }) => {
 					(restaurant) => restaurant.cuisine_id === selectedCuisine
 			  );
 	return (
-		<div className="w-full flex flex-col gap-4">
+		<div className="w-full flex flex-col gap-6 items-center">
 			{selectedRestaurants?.map((restaurant) => (
 				<RestaurantItems details={restaurant} key={restaurant.id} />
 			))}

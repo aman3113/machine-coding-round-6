@@ -76,7 +76,7 @@ export const RestaurantPage = () => {
 							<label>
 								Rating:
 								<select
-									className="border rounded-md ml-4 px-3 py-1 focus:outline-none text-black"
+									className="border rounded-md ml-4 px-3 py-1 focus:outline-none w-[100px] bg-slate-700 cursor-pointer text-white"
 									onChange={(e) =>
 										setFormData((prev) => ({
 											...prev,
@@ -84,11 +84,38 @@ export const RestaurantPage = () => {
 										}))
 									}
 								>
-									<option value={1}>1</option>
-									<option value={2}>2</option>
-									<option value={3}>3</option>
-									<option value={4}>4</option>
-									<option value={5}>5</option>
+									<optgroup
+										label="Select Rating"
+										className="text-sm font-normal text-center"
+									>
+										<option
+											className="p-1 checked:bg-pink-600 rounded cursor-pointer"
+											value={1}
+										>
+											1
+										</option>
+										<option
+											className="p-1 checked:bg-pink-600 cursor-pointer"
+											value={2}
+										>
+											2
+										</option>
+										<option
+											className="p-1 checked:bg-pink-600 cursor-pointer"
+											value={3}
+										>
+											3
+										</option>
+										<option
+											className="p-1 checked:bg-pink-600 cursor-pointer"
+											value={4}
+										>
+											4
+										</option>
+										<option className="p-1 checked:bg-pink-600" value={5}>
+											5
+										</option>
+									</optgroup>
 								</select>
 							</label>
 							<label>
